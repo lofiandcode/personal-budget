@@ -14,4 +14,9 @@ const createEnvelope = (queryArgs) => {
     }
 };
 
-module.exports = { createEnvelope };
+const updateEnvelope = (index, queryArgs) => {
+    Object.assign(db.envelopes[index], queryArgs);
+    return db.envelopes[index];
+};
+
+module.exports = { createEnvelope, updateEnvelope };

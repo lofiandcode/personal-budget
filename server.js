@@ -9,9 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.param('envelopeId', (req, res, next, id) => {
     const targetId = Number(id);
     const envelopeIndex = db.envelopes.findIndex(envelope => envelope.id === targetId);
-    console.log('Index is = ', envelopeIndex);
     if (envelopeIndex !== -1) {
-        console.log('in param if')
         req.envelopeIndex = envelopeIndex;
         next();
     } else {
@@ -33,10 +31,15 @@ app.post('/envelopes', (req, res, next) => {
     const newEnvelope = utils.createEnvelope(req.query);
     if (newEnvelope) {
         db.envelopes.push(newEnvelope);
+        db.monthlyBudgetTotal += newEnvelope.budget;
         res.status(201).send(newEnvelope);
     } else {
         res.status(400).send("Request did not include a 'title' and 'budget' for the new Envelope.");
     };
+})
+
+app.put('/envelopes/:envelopeId', (req, res, next) => {
+    res.send(utils.updateEnvelope(req.envelopeIndex, req.query));
 })
 
 

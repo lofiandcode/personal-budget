@@ -8,6 +8,6 @@ const envelopes = [
 
 let nextId = 2;
 
-let totalBudget;
+let monthlyBudgetTotal;
 
-module.exports = { envelopes, nextId, totalBudget };
+module.exports = { envelopes, nextId, monthlyBudgetTotal };
