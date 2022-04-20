@@ -1,6 +1,6 @@
 const db = require('../db');
 
-const creatEnvelope = (queryArgs) => {
+const createEnvelope = (queryArgs) => {
     if(queryArgs.hasOwnProperty('title') && queryArgs.hasOwnProperty('budget')) {
         const newEnvelope = {
             id: db.nextId,
@@ -14,4 +14,4 @@ const creatEnvelope = (queryArgs) => {
     }
 };
 
-module.exports = { creatEnvelope };
+module.exports = { createEnvelope };
