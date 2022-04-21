@@ -15,8 +15,21 @@ const createEnvelope = (queryArgs) => {
 };
 
 const updateEnvelope = (index, queryArgs) => {
-    Object.assign(db.envelopes[index], queryArgs);
+    if(queryArgs.amount) {
+        db.envelopes[index].budget -= queryArgs.amount;
+    } else {
+        Object.assign(db.envelopes[index], queryArgs);
+    }
     return db.envelopes[index];
 };
 
-module.exports = { createEnvelope, updateEnvelope };
+const findIndexbyId = (id) => {
+    const envelopeIndex = db.envelopes.findIndex(envelope => envelope.id === id);
+    if (envelopeIndex !== -1) {
+        return envelopeIndex;
+    } else {
+        return -1;
+    }
+}
+
+module.exports = { createEnvelope, updateEnvelope, findIndexbyId };
