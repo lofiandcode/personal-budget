@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="./styles.css"/>
     </head>
     <body>
         <main>
-            <section>
+            <header>
                 <h1>Personal Budget</h1>
-            </section>
+            </header>
             <section>
-                <h3>Get All Envelopes:</h3>
-                <input type="button" value="Retrieve"/>
-                <form>
-                    <h3>Get Envelope by ID:</h3>
-                    <label id="id-input-1">ID:</label>
-                    <input id="id-input-1" type="text" name="id"/>
+                <div id="forms">
+                    <h3>Get All Envelopes:</h3>
                     <input type="button" value="Retrieve"/>
-                </form>
-                <form>
-                    <h3>Create a New Envelope:</h3>
-                    <label id="title-input-1">Title:</label>
-                    <input id="title-input-1" type="text" name="title"/>
-                    <label id="budget-input-1">Budget:</label>
-                    <input id="budget-input-1" type="text" name="budget"/>
-                    <input type="button" value="Create"/>
-                </form>
-                <form>
-                    <h3>Update an Envelope's Data:</h3>
-                    <label id="id-input-2">ID:</label>
-                    <input id="id-input-2" type="text" name="id"/>
-                    <label id="title-input-2">Title:</label>
-                    <input id="title-input-2" type="text" name="title"/>
-                    <label id="budget-input-2">Budget:</label>
-                    <input id="budget-input-2" type="text" name="budget"/>
-                    <input type="button" value="Update"/>
-                </form>
-                <form>
-                    <h3>Subtract a Purchase from an Envelope:</h3>
-                    <label id="id-input-3">ID:</label>
-                    <input id="id-input-3" type="text" name="id"/>
-                    <label id="amount-input-1">Purchase Amount:</label>
-                    <input id="amount-input-1" type="text" name="amount"/>
-                    <input type="button" value="Update"/>
-                </form>
-                <form>
-                    <h3>Transfer Money from one Envelope to Another:</h3>
-                    <label id="from-input-1">From:</label>
-                    <input id="from-input-1" type="text" name="from" placeholder="Envelope ID"/>
-                    <label id="to-input-1">To:</label>
-                    <input id="to-input-1" type="text" name="to" placeholder="Envelope ID"/>
-                    <label id="transfer-input-1">Transfer Amount:</label>
-                    <input id="transfer-input-1" type="text" name="transfer"/>
-                    <input type="button" value="Transfer"/>
-                </form>
-                <form>
-                    <h3>Delete Envelope by ID:</h3>
-                    <label id="id-input-4">ID:</label>
-                    <input id="id-input-4" type="text" name="id"/>
-                    <input type="button" value="Delete"/>
-                </form>
-            </section>
-            <section>
-
+                    <form>
+                        <h3>Get Envelope by ID:</h3>
+                        <label id="id-input-1">ID:</label>
+                        <input id="id-input-1" type="text" name="id"/>
+                        <input type="button" value="Retrieve"/>
+                    </form>
+                    <form>
+                        <h3>Create a New Envelope:</h3>
+                        <label id="title-input-1">Title:</label>
+                        <input id="title-input-1" type="text" name="title"/>
+                        <label id="budget-input-1">Budget:</label>
+                        <input id="budget-input-1" type="text" name="budget"/>
+                        <input type="button" value="Create"/>
+                    </form>
+                    <form>
+                        <h3>Update an Envelope's Data:</h3>
+                        <label id="id-input-2">ID:</label>
+                        <input id="id-input-2" type="text" name="id"/>
+                        <label id="title-input-2">Title:</label>
+                        <input id="title-input-2" type="text" name="title"/>
+                        <label id="budget-input-2">Budget:</label>
+                        <input id="budget-input-2" type="text" name="budget"/>
+                        <input type="button" value="Update"/>
+                    </form>
+                    <form>
+                        <h3>Subtract a Purchase from an Envelope:</h3>
+                        <label id="id-input-3">ID:</label>
+                        <input id="id-input-3" type="text" name="id"/>
+                        <label id="amount-input-1">Purchase Amount:</label>
+                        <input id="amount-input-1" type="text" name="amount"/>
+                        <input type="button" value="Update"/>
+                    </form>
+                    <form>
+                        <h3>Transfer Money from one Envelope to Another:</h3>
+                        <label id="from-input-1">From:</label>
+                        <input id="from-input-1" type="text" name="from" placeholder="Envelope ID"/>
+                        <label id="to-input-1">To:</label>
+                        <input id="to-input-1" type="text" name="to" placeholder="Envelope ID"/>
+                        <label id="transfer-input-1">Transfer Amount:</label>
+                        <input id="transfer-input-1" type="text" name="transfer"/>
+                        <input type="button" value="Transfer"/>
+                    </form>
+                    <form>
+                        <h3>Delete Envelope by ID:</h3>
+                        <label id="id-input-4">ID:</label>
+                        <input id="id-input-4" type="text" name="id"/>
+                        <input type="button" value="Delete"/>
+                    </form>
+                </div>
+                <div id="envelopes">
+                    <h3>I am a card</h3>
+                </div>
             </section>
         </main>
     </body>
